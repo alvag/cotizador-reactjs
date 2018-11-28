@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Form from './Form';
 import { obtenerDiferenciaAnio, calcularMarca, obtenerPlan } from '../helpers/helper'
+import Resumen from './Resumen';
 
 class App extends Component {
 
@@ -34,6 +35,10 @@ class App extends Component {
 
                 <div className="form-container">
                     <Form cotizarSeguro={this.cotizarSeguro} />
+                    <Resumen
+                        data={this.state.data}
+                        result={this.state.result}
+                    />
                 </div>
             </div>
         );

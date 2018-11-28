@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Form from './Form';
-import { obtenerDiferenciaAnio, calcularMarca, obtenerPlan } from '../helpers/helper'
+import { obtenerDiferenciaAnio, calcularMarca, obtenerPlan } from '../helpers/helper';
 import Resumen from './Resumen';
+import Resultado from './Resultado';
 
 class App extends Component {
 
@@ -39,6 +40,8 @@ class App extends Component {
                         data={this.state.data}
                         result={this.state.result}
                     />
+
+                    < Resultado result={this.state.result} />
                 </div>
             </div>
         );

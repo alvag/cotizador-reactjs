@@ -10,6 +10,15 @@ export default class Form extends Component {
     cotizarSeguro = (e) => {
         e.preventDefault();
 
+        const infoAuto = {
+            marca: this.marcaRef.current.value,
+            year: this.yearRef.current.value,
+            plan: this.planBasicoRef.current.checked ? 'basico' : 'completo'
+        };
+
+        this.props.cotizarSeguro(infoAuto);
+
+        //e.currentTarget.reset();
     }
 
     render() {
